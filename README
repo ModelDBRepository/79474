@@ -1,0 +1,34 @@
+README file for genesis code used to run simulations in:
+
+"Ionic currents underlying difference in light response between type A
+and type B photoreceptors." by Blackwell J Neurophysiol. 2006 95:
+3060-72
+
+Main scripts are
+
+photomain102.g type B photoreceptor (used to make figures 2A-C; 4B,
+5A, 6)
+
+photomainB102toA19.g type A photoreceptor (used to make figures 2A-C;
+5B, 7-9)
+
+photomainB102toA9t?.g type A photoreceptor with different speed sodium
+currents (used to make figure 2D)
+
+These main script files require / use most of the other script files.
+
+To run the simulation you need to have chemesis2.1 installed Also, you
+will need to edit the
+filepath="/home/avrama/chemesis2.0/photo-spikes/final/"
+to point to a directory that exists on your computer.
+
+The first set of four simulations use current injection, and simulate
+800 ms of time. So, these run relatively fast.  The second set of
+simulations uses light as the stimulus, and simulate 15 s of time.
+Thus, these run relatively slowly.  Output from each current injection
+level, light intensity and duration are placed in a separate file.
+
+Note that the light intensity is controlled by the level1 parameter,
+which varies by sqrt(10) for each 10x increase in intensity.  This is
+to compensate for various non-photoreceptor mechanisms controlling
+light intensity.
